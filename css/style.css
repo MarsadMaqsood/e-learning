@@ -5,6 +5,19 @@
 
     --layer1: linear-gradient(teal, pink, purple);
     --layer2: #ffffff;
+
+    /* input label animation duration  */
+    --duration: 0.2s;
+
+    /* input label animation name  */
+    --anim-name: ease;
+
+    /* input label animation */
+    --animation: cubic-bezier(0.25, 0.1, 0.25, 0.1);
+
+    /* input label transform */
+    /* size | y-axis move | x-axis move */
+    --transform: scale(0.75) translateY(-100%) translateX(-30px);
 }
 
 html,
@@ -13,8 +26,11 @@ body {
     width: 100%;
     height: 100%;
     margin: 0px;
-    
+
+    font-family: system-ui;
+
 }
+
 
 /* Size */
 #bgLayer1,
@@ -30,40 +46,85 @@ body {
 
 #bgLayer2 {
     position: absolute;
-    /* opacity: 0.4; */
     background-color: rgba(255, 255, 255, 0.4);
 }
 
 
+a {
+    border: none;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+}
+
 #loginSec {
-  
     position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -50px -50px;
-    /* margin-left: 38%; */
+    text-align: center;
     margin-top: 8%;
     padding: 12px;
-    position: absolute;
     width: 400px;
-    height: 400px;
+    /* height: 400px; */
     background-color: rgba(255, 255, 255, 0.338);
     border-radius: 12px;
 }
 
+/* input */
+
+.input {
+    /* margin-left: 8%; */
+    margin-bottom: 12px;
+    position: relative;
+}
+
 input {
-    margin: 8px;
+    color: black;
+}
+
+.input-txt {
+    width: 340px;
+    height: 28px;
+    background-color: white;
+    box-shadow: none;
     padding: 12px;
     border-radius: 8px;
-    border: none;
-    background-color:rgba(255, 255, 255, 0.5);
+    border: 0;
 }
 
-#full {
-    width: 348px;
-
+/* span */
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 14px;
+    font-size: 15px;
+    color: grey;
+    padding-left: 8%;
+    transition: var(--duration);
+    transition-timing-function: var(--anim-name);
+    transition-timing-function: var(--animation);
 }
-#loginButton{
+
+label {
+    position: relative;
+    display: inline-block;
+}
+
+input:focus+.floating-label,
+input:not(:placeholder-shown):valid+.floating-label {
+    left: 0;
+    font-size: 15px;
+    opacity: 1;
+    color: var(--light-color);
+    transform: var(--transform);
+}
+
+/*  */
+
+
+
+#button {
     margin-top: 20px;
     padding: 10px;
     width: 120px;

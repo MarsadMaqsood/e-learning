@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="../../css/style.css">
 
+    <script src="../../js/style.js"></script>
+
 
 </head>
 
@@ -17,21 +19,47 @@
     <div id="bgLayer1"></div>
     <div id="bgLayer2"></div>
 
+    <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
 
-    <section id="loginSec">
+        <section id="loginSec">
 
-        <center>
-            <h1>Login</h1>
-        </center>
 
-        <input placeholder="First Name">
-        <input placeholder="Last Name">
+            <h1 style="margin-bottom: 42px;">Login</h1>
 
-        <input id="full" placeholder="Email">
-        <input id="full" placeholder="password">
-        <center><button id="loginButton">Login</button></center>
 
-    </section>
+
+            <div class="input">
+                <label>
+                    <input id="email" class="input-txt" type="text" title="Email" placeholder=" " />
+
+                    <span class="floating-label">Email</span>
+                </label>
+            </div>
+
+            <div class="input">
+                <label>
+                    <input id="password" class="input-txt" type="password" title="Password" placeholder=" " />
+
+                    <span class="floating-label">Password</span>
+                </label>
+            </div>
+
+            <a style="float: right;margin-right: 22px;" href="#">Forgot Password</a>
+            <br>
+
+            <button id="button" onclick="loginBtn()">Login</button>
+            <br>
+            <br>
+            <br>
+
+            <a href="#">New here, Create an Account</a>
+            <br>
+            <br>
+
+
+        </section>
+
+    </div>
 
 </body>
 
