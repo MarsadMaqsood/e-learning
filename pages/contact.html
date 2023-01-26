@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnix</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Jost:400,500,600,700|Muli:300,400,600,700&subset=latin%2Clatin-ext">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../fontawesome/css/all.css">
+
+    <script src="../../js/main.js"></script>
+
+</head>
+
+<body>
+
+    <div id="snackbar"></div>
+
+
+    <section id="homeSec">
+
+        <div id="header">
+
+            <button><i class="fa-solid fa-bars"></i></button>
+        
+        
+            <ul>
+                <img id="logo" src="../../img/logo.gif" height="48px">
+                <li><a href="../index.html">Home</a></li>
+                <li><a id="selected" href="../pages/contact.html">Contact</a></li>
+                <li><a href="../pages/auth/login.html">Login</a></li>
+                <li><a id="unselected" href="./register.html">Register</a></li>
+            </ul>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around;">
+
+            <div style="width: max-content;"></div>
+
+            <div style="width:360px">
+
+
+
+                <h2><span>Get in touch with us today!</span></h2>
+                <p>Whether you have a question, concern or just want to say hi, we're all ears</p>
+
+            </div>
+
+            <div style="width: max-content;"></div>
+
+            <section id="loginSec"
+                style="background-color: #e4edfa; box-shadow: 2px 2px 6px rgb(222, 221, 221); margin: 4%;">
+
+
+                <h1 style="margin-bottom: 42px;">Send us a message</h1>
+
+                <div class="input">
+                    <label>
+                        <input id="name" class="input-txt" type="text" title="Email" placeholder=" " />
+
+                        <span class="floating-label">Name</span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label>
+                        <input id="subject" class="input-txt" type="text" title="Email" placeholder=" " />
+
+                        <span class="floating-label">Subject</span>
+                    </label>
+                </div>
+
+
+                <div class="input">
+                    <label>
+                        <input id="email" class="input-txt" type="text" title="Email" placeholder=" " />
+
+                        <span class="floating-label">Email</span>
+                    </label>
+                </div>
+
+
+
+
+                <div class="input">
+                    <label>
+                        <input id="msg" class="input-txt" type="text" title="Passwordl" placeholder=" " />
+
+                        <span class="floating-label">Message</span>
+                    </label>
+                </div>
+
+                <button id="button" onclick="sendMessage()">Send Message</button>
+                <br>
+                <br>
+                <br>
+
+
+            </section>
+
+            <div style="width: max-content;"></div>
+
+        </div>
+
+        </div>
+
+        <footer id="foter"></footer>
+
+        <script>
+            fetch('./footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('foter').innerHTML = data;
+                });
+        </script>
+
+    </section>
+
+
+
+</body>
+
+</html>

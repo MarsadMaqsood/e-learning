@@ -1,11 +1,15 @@
+// let button = document.querySelector("#header button");
+// let menu = document.querySelector("#header ul");
 
-function loginBtn() {
+// button.addEventListener("click", function(){
+//     menu.classList.toggle("active");
+// });
 
-    var email = document.getElementById('email');
-    var password = document.getElementById('password');
 
-    ///todo: ///
-    
-
-}
-
+window.onload = function() {
+    let button = document.querySelector("#header button");
+    let menu = document.querySelector("#header ul");
+    button.addEventListener("click", function(){
+        menu.classList.toggle("active");
+    });
+};

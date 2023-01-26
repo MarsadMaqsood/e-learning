@@ -1,10 +1,19 @@
+@import url('./snackbar.css');
+
 :root {
     --color1: teal;
     --color2: pink;
     --color3: purple;
+    --spanColor: #6440FB;
 
     --layer1: linear-gradient(teal, pink, purple);
     --layer2: #ffffff;
+
+    /* --font: system-ui; */
+    --font: Jost;
+
+    /* --bgColorSec1: #182c47; */
+    --bgColorSec1: #F8FBFF;
 
     /* input label animation duration  */
     --duration: 0.2s;
@@ -22,12 +31,10 @@
 
 html,
 body {
-
     width: 100%;
     height: 100%;
     margin: 0px;
-
-    font-family: system-ui;
+    font-family: var(--font);
 
 }
 
@@ -51,6 +58,7 @@ body {
 
 
 a {
+    color: black;
     border: none;
     text-decoration: none;
 }
@@ -60,12 +68,10 @@ a:hover {
 }
 
 #loginSec {
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
-    margin-top: 8%;
     padding: 12px;
     width: 400px;
-    /* height: 400px; */
     background-color: rgba(255, 255, 255, 0.338);
     border-radius: 12px;
 }
@@ -80,6 +86,7 @@ a:hover {
 
 input {
     color: black;
+    outline: none;
 }
 
 .input-txt {
@@ -122,15 +129,338 @@ input:not(:placeholder-shown):valid+.floating-label {
 
 /*  */
 
-
-
 #button {
+    cursor: pointer;
     margin-top: 20px;
     padding: 10px;
     width: 120px;
     border-radius: 8px;
     border: none;
-    background-color: rgb(153, 71, 192);
+    background-color: rgb(155, 79, 191);
     color: #ffffff;
 
+}
+
+#button:hover{
+    background-color: rgb(147, 51, 191);
+}
+
+/* Home */
+span {
+    color: var(--spanColor);
+}
+
+#homeSec {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgColorSec1);
+}
+
+/* Header */
+
+
+#header {
+    height: 82px;
+    background-color: white;
+    box-shadow: 2px 2px 6px rgb(238, 238, 238);
+    align-items: center;
+    display: flex;
+}
+
+#logo {
+    margin-left: 38px;
+    margin-right: 48%;
+
+}
+
+
+ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+li {
+
+    padding: 12px;
+    display: inline;
+}
+
+a {
+    cursor: pointer;
+}
+
+#selected {
+    color: var(--spanColor);
+}
+
+#unselected {
+    color: black;
+}
+#unselected:hover {
+    color: grey;
+}
+
+#header button{
+    display: none;
+}
+
+/* mediaquery for small screen header */
+@media only screen and (max-width: 730px) {
+    /* Add a button to toggle the sidemenu */
+    #header {
+        width: 100%;
+        position: relative;
+        padding-left: 12px;
+    }
+
+    #logo{
+        display: none;
+
+    }
+
+    #header button {
+
+        float: right;
+        display: contents;
+        position: absolute;
+        text-align: center;
+        font-size: 24px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Hide the menu items by default */
+    ul {
+        display: none;
+    }
+
+    /* Style the sidemenu */
+    ul.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 82px;
+        right: 0;
+        background-color: white;
+        width: 80%;
+        padding: 20px;
+        box-shadow: 2px 2px 6px rgb(238, 238, 238);
+    }
+
+    /* Remove the padding and display properties of the menu items */
+    li {
+        padding: 0;
+        display: block;
+    }
+}
+
+/* end */
+
+
+/* content */
+
+#main {
+    margin-top: 40px;
+    /* width: 48%; */
+    padding: 6%;
+}
+
+#tagline {
+    font-size: 48px;
+
+}
+
+#subtitle {
+    font-size: medium;
+
+}
+
+
+
+#search {
+    width: 100%;
+    padding: 26px;
+    border-radius: 32px;
+    background-color: white;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 20px rgb(219, 219, 219);
+
+}
+
+#icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 46px;
+    margin-left: -58px;
+    border-radius: 32px;
+    background-color: var(--spanColor);
+}
+
+#fa {
+    color: white;
+}
+
+/* Categories */
+
+#categoriesMain {
+    padding: 4%;
+    text-align: center;
+}
+
+#cateH2 {
+    margin-top: 100px;
+}
+
+#container {
+    align-items: center;
+    cursor: pointer;
+    width: 260px;
+    /* width: fit-content; */
+    /* height: 100px; */
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 18px;
+    margin: 6px;
+}
+
+#detail {
+    text-align: left;
+}
+
+#cnx {
+    display: flex;
+}
+
+#iconContainer {
+    /* display: flex; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 32px;
+    background-color: lightgray;
+}
+
+#title {
+    margin-left: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: black;
+}
+
+#course {
+    font-size: 14px;
+    margin-left: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: grey;
+}
+
+
+#container :hover #iconContainer {
+    color: white;
+    background-color: var(--spanColor);
+}
+
+#container :hover #title {
+
+    color: var(--spanColor);
+}
+
+/* courses */
+
+#courseContainer {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 12px;
+    border: none;
+    width: fit-content;
+    box-shadow: 2px 2px 6px rgb(239, 239, 239);
+    margin: 12px;
+    align-items: center;
+}
+
+#courseImage {
+    width: 415px;
+    border-radius: 12px 12px 0px 0px;
+}
+
+#courseTitle {
+    margin: 0;
+    font-size: large;
+}
+
+#courseMeta {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#courseContainer:hover #courseTitle {
+    color: var(--spanColor);
+}
+
+#sp {
+    width: 10px;
+}
+
+#space {
+    width: 40px;
+}
+
+
+#avatar {
+    border-radius: 22px;
+    width: 50px;
+    height: 50px;
+}
+
+/* footer */
+
+footer {
+    padding: 4%;
+    background-color: #282663;
+}
+
+#about {
+    display: grid;
+    color: white;
+}
+
+#footerA {
+    color: white;
+}
+
+#searchF {
+    width: 400px;
+    height: 20px;
+    padding: 22px;
+    border-radius: 32px;
+    background-color: white;
+    border: none;
+    outline: none;
+}
+
+#hhx {
+    background-color: white;
+    padding: 12px;
+    border-radius: 22px;
+    display: inline;
+    margin-top: 18px;
+}
+
+#hhx:hover {
+    color: white;
+    background-color: var(--spanColor);
 }

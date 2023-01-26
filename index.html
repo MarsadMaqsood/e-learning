@@ -5,19 +5,189 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E Learning</title>
+    <title>Learnix</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Jost:400,500,600,700|Muli:300,400,600,700&subset=latin%2Clatin-ext">
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+    <script src="./js/style.js"></script>
+
 
 
 </head>
 
 <body>
 
-    <div id="bgLayer1"></div>
-    <div id="bgLayer2"></div>
+    <div>
 
-   
+        <section id="homeSec">
+
+            <div id="header">
+
+                <button><i class="fa-solid fa-bars"></i></button>
+
+
+                <ul>
+                    <img id="logo" src="../../img/logo.gif" height="48px">
+                    <li><a id="selected">Home</a></li>
+                    <li><a href="./pages/course.html">Course</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
+                    <li><a href="./pages/auth/login.html">Login</a></li>
+                </ul>
+            </div>
+
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+                <main id="main">
+
+                    <div>
+
+                        <h2 id="tagline">Find Your Preferred<br><span>Courses</span> & Improve Your Skills</h2>
+
+                        <p id="subtitle">Build Skills With Courses, Certificates, And Degrees Online From World-Class
+                            Universities
+                            And
+                            Companies.</p>
+
+                        <div style="display: flex; align-items: center; margin-top: 40px;">
+                            <input id="search" placeholder="What do you want to learn today">
+                            <div id="icon">
+                                <a href="./pages/course.html"> <i id="fa" class="fa-solid fa-magnifying-glass"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </main>
+
+                <div style="margin-right: 6%;">
+                    <!-- <div style="float: right; margin-top: -36%; margin-right: 6%;"> -->
+
+                    <img src="./img/img.png" width="400px">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <main id="categoriesMain">
+
+                <h2 id="cateH2">Top Categories</h2>
+
+                <p id="subtitle">Choose From Our <span>Top</span> Categories</p>
+                <br><br><br><br>
+
+                <div
+                    style="display: flex;flex-wrap:wrap; align-items: center; justify-content: space-between; text-align: left;">
+
+                    <a href="./pages/course.html">
+                        <div id="container" style="align-self: flex-start;">
+
+                            <div id="cnx">
+
+                                <i id="iconContainer" class="fa-solid fa-code"></i>
+                                <div id="detail">
+                                    <p id="title">Web Development</p>
+                                    <p id="course">4 Courses</p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="./pages/course.html">
+
+                        <div id="container">
+
+                            <div id="cnx">
+
+                                <i id="iconContainer" class="fa-solid fa-mobile-screen-button"></i>
+                                <div id="detail">
+                                    <p id="title">App Development</p>
+                                    <p id="course">2 Courses</p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="./pages/course.html">
+                        <div id="container">
+
+                            <div id="cnx">
+
+                                <i id="iconContainer" class="fa-regular fa-hard-drive"></i>
+                                <div id="detail">
+                                    <p id="title">Machine Learning</p>
+                                    <p id="course">3 Courses</p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="./pages/course.html">
+
+                        <div id="container">
+
+                            <div id="cnx">
+
+                                <i id="iconContainer" class="fa-solid fa-infinity"></i>
+                                <div id="detail">
+                                    <p id="title">Data Analysts</p>
+                                    <p id="course">4 Courses</p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="./pages/course.html">
+
+                        <div id="container">
+
+                            <div id="cnx">
+
+                                <i id="iconContainer" class="fa-brands fa-python"></i>
+                                <div id="detail">
+                                    <p id="title">Python Development</p>
+                                    <p id="course">2 Courses</p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+
+            </main>
+
+        </section>
+
+    </div>
+    <footer id="foter"></footer>
+    <script>
+        fetch('./pages/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('foter').innerHTML = data;
+            });
+    </script>
 
 </body>
 

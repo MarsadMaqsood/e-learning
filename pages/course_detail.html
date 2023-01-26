@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnix</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Jost:400,500,600,700|Muli:300,400,600,700&subset=latin%2Clatin-ext">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/embeed.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+
+
+
+</head>
+
+<body>
+
+    <section id="homeSec">
+
+        <div id="header">
+
+            <button><i class="fa-solid fa-bars"></i></button>
+
+            <ul>
+                <img id="logo" src="../../img/logo.gif" height="48px">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a id="selected" href="./pages/course.html">Course</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="./auth/login.html">Login</a></li>
+            </ul>
+        </div>
+
+
+        <div style="display: inline; align-items: center; justify-content: center;">
+            <iframe class="center-iframe" width="800px" height="440px" src="https://www.youtube.com/embed/F2xtrS3xSLo"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <br>
+            <center>
+                <p id="courseTitle">Angular - The complete guide 2023 edition</p>
+            </center>
+
+            <div id="courseMeta">
+                <i class="fa-solid fa-book"></i>
+                <div id="sp"></div>
+                <p>2 Courses</p>
+                <div id="space"></div>
+                <i class="fa-regular fa-clock"></i>
+                <div id="sp"></div>
+                <p>2 Week</p>
+
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <footer id="foter"></footer>
+
+        <script>
+            fetch('./footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('foter').innerHTML = data;
+                });
+        </script>
+
+
+    </section>
+
+
+
+
+</body>
+
+</html>

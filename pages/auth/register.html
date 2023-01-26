@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnix</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Jost:400,500,600,700|Muli:300,400,600,700&subset=latin%2Clatin-ext">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../fontawesome/css/all.css">
+
+    <script src="../../js/main.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div id="snackbar"></div>
+
+
+    <section id="homeSec">
+
+        <div id="header">
+
+            <button><i class="fa-solid fa-bars"></i></button>
+
+
+            <ul>
+                <img id="logo" src="../../img/logo.gif" height="48px">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a  href="./login.html">Login</a></li>
+                <li><a id="selected" href="./register.html">Register</a></li>
+            </ul>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around;">
+
+
+
+            <div style="width:360px">
+
+                <img src="../../img/img.png" width="360px">
+
+                <p>Don't miss out on the opportunity to enhance your skills and advance your career. <span>Register
+                        now.</span></p>
+
+            </div>
+
+
+
+
+
+            <section id="loginSec"
+                style="background-color: #e4edfa; box-shadow: 2px 2px 6px rgb(222, 221, 221); margin: 4%;">
+
+
+                <h1 style="margin-bottom: 42px;">Register</h1>
+
+                <div class="input">
+                    <label>
+                        <input id="name" class="input-txt" type="text" title="Full Name" placeholder=" " />
+
+                        <span class="floating-label">Full Name</span>
+                    </label>
+                </div>
+
+                <div class="input">
+                    <label>
+                        <input id="email" class="input-txt" type="text" title="Email" placeholder=" " />
+
+                        <span class="floating-label">Email</span>
+                    </label>
+                </div>
+
+
+
+                <div class="input">
+                    <label>
+                        <input id="password" class="input-txt" type="text" title="Passwordl" placeholder=" " />
+
+                        <span class="floating-label">Password</span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label>
+                        <input id="cpassword" class="input-txt" type="text" title="ConfirmPassword" placeholder=" " />
+
+                        <span class="floating-label">Confirm Password</span>
+                    </label>
+                </div>
+
+                <br>
+
+                <button id="button" onclick="register()">Register</button>
+                <br>
+                <br>
+                <br>
+
+                <a href="./register.html">New here, Create an Account</a>
+                <br>
+                <br>
+
+
+            </section>
+
+
+
+        </div>
+
+        </div>
+
+
+
+        <footer id="foter"></footer>
+
+        <script>
+            fetch('../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('foter').innerHTML = data;
+                });
+        </script>
+
+
+    </section>
+
+
+
+</body>
+
+</html>

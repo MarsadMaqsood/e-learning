@@ -5,61 +5,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - E Learning</title>
+    <title>Learnix</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Jost:400,500,600,700|Muli:300,400,600,700&subset=latin%2Clatin-ext">
 
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../fontawesome/css/all.css">
 
-    <script src="../../js/style.js"></script>
-
+    <script src="../../js/main.js"></script>
 
 </head>
 
 <body>
 
-    <div id="bgLayer1"></div>
-    <div id="bgLayer2"></div>
-
-    <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-
-        <section id="loginSec">
+    <div id="snackbar"></div>
 
 
-            <h1 style="margin-bottom: 42px;">Login</h1>
+    <section id="homeSec">
+
+        <div id="header">
+
+            <button><i class="fa-solid fa-bars"></i></button>
 
 
+            <ul>
+                <img id="logo" src="../../img/logo.gif" height="48px">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a id="selected" href="./login.html">Login</a></li>
+                <li><a href="./register.html">Register</a></li>
+            </ul>
+        </div>
 
-            <div class="input">
-                <label>
-                    <input id="email" class="input-txt" type="text" title="Email" placeholder=" " />
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around;">
 
-                    <span class="floating-label">Email</span>
-                </label>
+            <div style="width: max-content;"></div>
+
+            <div style="width:360px">
+
+                <img src="../../img/img.png" width="360px">
+
+                <p><span>Log in</span> to access our library of resources, expert instructors, and interactive tools."
+                </p>
+
             </div>
 
-            <div class="input">
-                <label>
-                    <input id="password" class="input-txt" type="password" title="Password" placeholder=" " />
+            <div style="width: max-content;"></div>
 
-                    <span class="floating-label">Password</span>
-                </label>
-            </div>
-
-            <a style="float: right;margin-right: 22px;" href="#">Forgot Password</a>
-            <br>
-
-            <button id="button" onclick="loginBtn()">Login</button>
-            <br>
-            <br>
-            <br>
-
-            <a href="#">New here, Create an Account</a>
-            <br>
-            <br>
+            <section id="loginSec"
+                style="background-color: #e4edfa; box-shadow: 2px 2px 6px rgb(222, 221, 221); margin: 4%;">
 
 
-        </section>
+                <h1 style="margin-bottom: 42px;">Login</h1>
 
-    </div>
+                <div class="input">
+                    <label>
+                        <input id="email" class="input-txt" type="text" title="Email" placeholder=" " />
+
+                        <span class="floating-label">Email</span>
+                    </label>
+                </div>
+
+
+                <div class="input">
+                    <label>
+                        <input id="password" class="input-txt" type="text" title="Passwordl" placeholder=" " />
+
+                        <span class="floating-label">Password</span>
+                    </label>
+                </div>
+
+
+                <a style="float: right;margin-right: 22px;" href="#">Forgot Password</a>
+                <br>
+
+                <button id="button" onclick="login()">Login</button>
+                <br>
+                <br>
+                <br>
+
+                <a href="./register.html">New here, Create an Account</a>
+                <br>
+                <br>
+
+
+            </section>
+
+            <div style="width: max-content;"></div>
+
+        </div>
+
+        </div>
+
+        <footer id="foter"></footer>
+
+        <script>
+            fetch('../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('foter').innerHTML = data;
+                });
+        </script>
+
+    </section>
+
+
 
 </body>
 
